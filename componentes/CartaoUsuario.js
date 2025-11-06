@@ -1,13 +1,13 @@
 import React from "react";
-import { View,Text, Image } from "react-native";
+import { View,Text, Image, StyleSheet } from "react-native";
 import fotos from '../img/fotos';
 
 
 export default function CartaoUsuario ({nome, descricao, img}) {
     return(
         <View style={estilos.cartao}>
-            <Image source={fotos{img}} style={estilos.foto} />
-            <Test style={estilos.nome}>{nome}</Test>
+            <Image source={fotos[img]} style={estilos.foto} />
+            <Text style={estilos.nome}>{nome}</Text>
             <Text style={estilos.descricao}>{descricao}</Text>
         </View>
     );
@@ -27,7 +27,7 @@ const estilos = StyleSheet.create({
         shadowRadius:5,
         elevation:5,
     },
-    foto:{width:80, height:80, borderRadius:40, marginBottom:10.},
+    foto:{width:80, height:80, borderRadius:40, marginBottom:10},
     nome:{fontSize:18, fontWeight:'bold'},
     descricao:{fontSize:14,color:'#555', textAlign:'center'}
 });
